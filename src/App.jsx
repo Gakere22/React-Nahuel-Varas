@@ -1,22 +1,40 @@
 import React from "react"
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-import Menu from './Components/NavBar/menu';
-
+import MenuNavegacion from "./Components/NavBar/MenuNavegacion"
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer"  
+import { ChakraProvider } from "@chakra-ui/react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import NotFound from "./assets/NotFound/NotFound"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+
+
+  const [prodCompra, setProdCompra] = useState([]);
+
+  
+
+    
+  
 
   return (
     <>
-    <div>
-      <Menu> </Menu>
-      <ItemListContainer greeting={"Bienvenidos"}></ItemListContainer>
-    </div>
+    <ChakraProvider>   
+      <BrowserRouter>
+        <MenuNavegacion></MenuNavegacion>
+        <Routes>
+          <Route path='/productos/' element={ <ItemListContainer  title='Tienda'/>} > </Route> 
+          <Route path='/productos/:productoId' element={<ItemDetailContainer title='Detalle'/>}> </Route>
+          <Route path='/categorias/:categoria' element={ <ItemListContainer  title='Categoria'/>} > </Route>               
+          <Route path='*' element={<NotFound title='Pagina No encontrada' />} > </Route> 
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
     </>
   )
 }

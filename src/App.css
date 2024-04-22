@@ -41,3 +41,106 @@
   color: #888;
 }
 
+.color-base{
+  background-color: gray;
+}
+
+.boton-Item-Producto{
+  content:"Lo quiero";
+  background-color: red;
+  margin: 0.2rem;
+  transition: 1s;
+  cursor: pointer;
+ 
+}
+
+.boton-Item-Producto:hover{
+  background-color:rgb(240, 95, 95) ;
+ 
+}
+
+.botonItemDetalle{
+  background-color: red;
+  margin: 0.2rem;
+  transition: 1s;
+  cursor: pointer;  
+}
+
+.botonItemDetalle:hover{
+  background-color:rgb(240, 95, 95) ;
+ 
+}
+
+.valorDato{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: black;
+}
+
+
+.Lista-Item-Conenedor{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  
+}
+
+
+
+
+
+.item-Producto{
+  border:  solid 1px grey;
+  transition-duration: 1s;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-top: 3rem;
+  max-width: 300px;
+}
+
+
+
+.item-Producto:hover{
+  box-shadow: rgb(60, 59, 59) 5px 5px 5px 5px;
+  
+} 
+
+
+
+
+.item-Producto-Imagen{
+  height: 260px;
+  width: 300px;
+  transition-duration: 1.5s;
+  object-fit: contain;
+}
+
+
+.item-Producto-Imagen:hover{
+  transform: scale(1.4);
+  
+}
+
+
+.item-Producto-Descripcion{
+  justify-content: center;
+  background-color: red;
+  height: 38%;
+}
+
+.item-Producto-Descripcion-Texto{
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: rgb(60, 59, 59);
+}
+
+.item-Producto-Detalle{
+  border:  solid 1px grey;
+  transition-duration: 1s;
+  flex-direction: column;
+  margin:auto;
+  margin-top: 2rem;
+  max-width: 350px;
+
+}
